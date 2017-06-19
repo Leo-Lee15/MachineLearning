@@ -4,9 +4,8 @@
 distance <- function(x, y) {
   if (!is.numeric(x) || !is.numeric(y)) {
     stop("x and y must be numeric!")
-  } else {
-    dd <- sqrt(sum((x - y)^2))
-  }
+  } 
+  dd <- sqrt(sum((x - y)^2))
   return(dd)
 }
 
@@ -19,8 +18,8 @@ leo_knn_mon <- function(.df, .y, .k, .new_point) {
   
   if (!is.numeric(.new_point)) {
     stop(".new_point must be numeric")
-  } else {
-    
+  } 
+
    # 对特征数据进行标准化
     scale_mat <- scale(.df)
     
@@ -50,7 +49,6 @@ leo_knn_mon <- function(.df, .y, .k, .new_point) {
     names(result_df)[1:length(.df)] <- names(.df)
     # return(results)
     return(result_df)
-  }
 }
 
 ## 例子
